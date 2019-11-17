@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuringMachine", "TuringMachine\TuringMachine.csproj", "{0035F856-6702-42E9-BFBB-5B18A00D14D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuringMachineTests", "TuringMachineTests\TuringMachineTests.csproj", "{A2DB3395-3260-4F6F-AEE4-10BB3C87D4E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0035F856-6702-42E9-BFBB-5B18A00D14D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0035F856-6702-42E9-BFBB-5B18A00D14D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0035F856-6702-42E9-BFBB-5B18A00D14D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0035F856-6702-42E9-BFBB-5B18A00D14D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2DB3395-3260-4F6F-AEE4-10BB3C87D4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DB3395-3260-4F6F-AEE4-10BB3C87D4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DB3395-3260-4F6F-AEE4-10BB3C87D4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DB3395-3260-4F6F-AEE4-10BB3C87D4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
