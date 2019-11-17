@@ -9,15 +9,10 @@ namespace TuringMachine
 {
     internal class Program
     {
+        [STAThread]
         public static void Main(string[] args)
         {
-            //TextReader reader =
-            //    new StreamReader(new FileStream(@"C:\Users\andris.zacs\Desktop\myInput.txt", FileMode.Open));
-            //string s = reader.ReadLine();
-            //string[] inp = s.Split(' ');
-            //Machine.TuringMachine machine = new Machine.TuringMachine(0, inp[0], inp[1], inp[2], reader.ReadToEnd());
-            //List<char> chars = machine.Run();
-            //Console.WriteLine(string.Join("", chars));
+            Application.EnableVisualStyles();
             TuringMachine turing = new TuringMachine();
             Application.Run(turing);
         }

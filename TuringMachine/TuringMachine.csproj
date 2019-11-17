@@ -46,6 +46,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Machine\MissingRuleException.cs" />
     <Compile Include="Machine\RulesParser.cs" />
     <Compile Include="Machine\TuringMachine.cs" />
     <Compile Include="Program.cs" />

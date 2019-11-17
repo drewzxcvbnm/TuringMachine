@@ -13,11 +13,11 @@ namespace TuringMachine.Machine
 
     public class TuringMachine
     {
-        private List<char> _tape = new List<char>();
+        public List<char> Tape = new List<char>();
 
         private int _head;
 
-        private int Head
+        public int Head
         {
             get => _head;
             set
@@ -29,7 +29,7 @@ namespace TuringMachine.Machine
                     _head = _head + 1;
                 }
 
-                if (_head >= _tape.Count)
+                if (_head >= Tape.Count)
                 {
                     AddRightCell();
                 }
@@ -44,15 +44,15 @@ namespace TuringMachine.Machine
             _head = head;
             _startState = startState;
             _endState = endState;
-            _currentState = _startState;
+            CurrentState = _startState;
             _rules = ParseRules(rules);
-            _tape = new List<char>(input);
+            Tape = new List<char>(input);
         }
 
         private readonly string _startState;
         private readonly string _endState;
-        private string _currentState;
-        private bool CanContinue => _currentState != _endState;
+        public string CurrentState;
+        public bool CanContinue => CurrentState != _endState;
 
         public List<char> Run()
         {
@@ -61,25 +61,25 @@ namespace TuringMachine.Machine
                 ExecuteStep();
             }
 
-            return _tape;
+            return Tape;
         }
 
-        private void ExecuteStep()
+        public void ExecuteStep()
         {
             if (!CanContinue)
                 return;
             Tuple<string, char, Movement> rule;
             try
             {
-                rule = _rules[new Tuple<string, char>(_currentState, _tape[Head])];
+                rule = _rules[new Tuple<string, char>(CurrentState, Tape[Head])];
             }
             catch (Exception e)
             {
-                throw e;
+                throw new MissingRuleException(new Tuple<string, char>(CurrentState, Tape[Head]));
             }
 
-            _tape[Head] = rule.Item2;
-            _currentState = rule.Item1;
+            Tape[Head] = rule.Item2;
+            CurrentState = rule.Item1;
             if (rule.Item3 == Movement.Left)
                 Head--;
             if (rule.Item3 == Movement.Right)
@@ -88,15 +88,15 @@ namespace TuringMachine.Machine
 
         private void AddLeftCell()
         {
-            _tape.Add('_');
-            for (int i = _tape.Count - 1; i > 0; i--)
-                _tape[i] = _tape[i - 1];
-            _tape[0] = '_';
+            Tape.Add('_');
+            for (int i = Tape.Count - 1; i > 0; i--)
+                Tape[i] = Tape[i - 1];
+            Tape[0] = '_';
         }
 
         private void AddRightCell()
         {
-            _tape.Add('_');
+            Tape.Add('_');
         }
     }
 }

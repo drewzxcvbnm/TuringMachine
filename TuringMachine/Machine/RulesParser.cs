@@ -16,10 +16,11 @@ namespace TuringMachine.Machine
         /// </summary>
         /// <param name="rulesBlock"></param>
         /// <returns></returns>
+        /// 
         public static Dictionary<Tuple<string, char>, Tuple<string, char, Movement>> ParseRules(string rulesBlock)
         {
             string[] rules =
-                rulesBlock.Split(new string[] {Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries);
+                rulesBlock.Split(new string[] {"\n"}, StringSplitOptions.RemoveEmptyEntries);
 
             return rules.Select(ParseRule).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         }
