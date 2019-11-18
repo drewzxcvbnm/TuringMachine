@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using static TuringMachine.Machine.RulesParser;
 
 namespace TuringMachine.Machine
@@ -52,7 +53,11 @@ namespace TuringMachine.Machine
         private readonly string _startState;
         private readonly string _endState;
         public string CurrentState;
-        public bool CanContinue => CurrentState != _endState;
+
+        public bool CanContinue {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get { return CurrentState != _endState; }
+        }
 
         public List<char> Run()
         {
@@ -64,6 +69,7 @@ namespace TuringMachine.Machine
             return Tape;
         }
 
+        [MethodImpl(MethodImplOptions.Synchronized)]
         public void ExecuteStep()
         {
             if (!CanContinue)
