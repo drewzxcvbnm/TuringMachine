@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using static TuringMachine.Machine.RulesParser;
 
 namespace TuringMachine.Machine
 {
@@ -20,7 +19,7 @@ namespace TuringMachine.Machine
 
         public int Head
         {
-            get => _head;
+            get { return _head; }
             set
             {
                 _head = value;
@@ -46,7 +45,7 @@ namespace TuringMachine.Machine
             _startState = startState;
             _endState = endState;
             CurrentState = _startState;
-            _rules = ParseRules(rules);
+            _rules = RulesParser.ParseRules(rules);
             Tape = new List<char>(input);
         }
 

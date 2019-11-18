@@ -133,7 +133,10 @@ root-to-number  _  _  R  done";
 
         private void set_Click(object sender, EventArgs e)
         {
-            backgroundThread?.Abort();
+            if (backgroundThread != null)
+            {
+                backgroundThread.Abort();   
+            }
             _machine = new Machine.TuringMachine(
                 Convert.ToInt32(this.head_box.Text),
                 this.start_state_box.Text,
