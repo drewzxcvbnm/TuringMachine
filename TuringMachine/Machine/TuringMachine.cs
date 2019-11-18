@@ -54,7 +54,8 @@ namespace TuringMachine.Machine
         private readonly string _endState;
         public string CurrentState;
 
-        public bool CanContinue {
+        public bool CanContinue
+        {
             [MethodImpl(MethodImplOptions.Synchronized)]
             get { return CurrentState != _endState; }
         }

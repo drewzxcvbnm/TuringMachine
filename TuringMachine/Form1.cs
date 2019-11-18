@@ -160,6 +160,7 @@ root-to-number  _  _  R  done";
                 tape.Controls[i].Text = @"_";
                 tape.Controls[i].BackColor = Color.White;
             }
+
             this.status.Text = string.Format("Current state:\n{0}", _machine.CurrentState);
             info.Text = "";
         }
@@ -218,7 +219,7 @@ root-to-number  _  _  R  done";
         private void rate_TextChanged(object sender, EventArgs e)
         {
             int miliSeconds;
-            if (int.TryParse(this.rate.Text,out miliSeconds)) 
+            if (int.TryParse(this.rate.Text, out miliSeconds))
             {
                 this.start.Enabled = true;
             }
@@ -242,14 +243,16 @@ root-to-number  _  _  R  done";
                         {
                             Thread.Sleep(wait);
                             _machine.ExecuteStep();
-                            this.Invoke((MethodInvoker)(() => {
+                            this.Invoke((MethodInvoker) (() =>
+                            {
                                 AlignTape();
                                 this.status.Text = string.Format("Current state:\n{0}", _machine.CurrentState);
                             }));
                         }
+
                         if (!_machine.CanContinue)
                         {
-                            this.Invoke((MethodInvoker)(() =>
+                            this.Invoke((MethodInvoker) (() =>
                             {
                                 this.info.Text = @"Final state is reached";
                                 this.run.Enabled = false;
@@ -257,8 +260,8 @@ root-to-number  _  _  R  done";
                             }));
                         }
                     }
-                    )
-                );
+                )
+            );
             backgroundThread.Start();
         }
 
