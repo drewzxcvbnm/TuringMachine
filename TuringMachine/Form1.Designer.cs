@@ -70,11 +70,11 @@ namespace TuringMachine
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.79476F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.20524F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 287F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(782, 432);
@@ -95,10 +95,10 @@ namespace TuringMachine
             this.panel1.Controls.Add(this.end_state);
             this.panel1.Controls.Add(this.start_state);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(2, 146);
+            this.panel1.Location = new System.Drawing.Point(2, 152);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 284);
+            this.panel1.Size = new System.Drawing.Size(778, 278);
             this.panel1.TabIndex = 2;
             // 
             // set
@@ -167,10 +167,10 @@ namespace TuringMachine
             // 
             // head
             // 
-            this.head.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.head.Location = new System.Drawing.Point(10, 115);
+            this.head.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.head.Location = new System.Drawing.Point(2, 120);
             this.head.Name = "head";
-            this.head.Size = new System.Drawing.Size(115, 29);
+            this.head.Size = new System.Drawing.Size(124, 23);
             this.head.TabIndex = 3;
             this.head.Text = "Head position:";
             this.head.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -178,9 +178,9 @@ namespace TuringMachine
             // input
             // 
             this.input.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.input.Location = new System.Drawing.Point(27, 87);
+            this.input.Location = new System.Drawing.Point(27, 93);
             this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(99, 29);
+            this.input.Size = new System.Drawing.Size(99, 23);
             this.input.TabIndex = 2;
             this.input.Text = "Input:";
             this.input.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -188,9 +188,9 @@ namespace TuringMachine
             // end_state
             // 
             this.end_state.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.end_state.Location = new System.Drawing.Point(27, 57);
+            this.end_state.Location = new System.Drawing.Point(27, 63);
             this.end_state.Name = "end_state";
-            this.end_state.Size = new System.Drawing.Size(99, 29);
+            this.end_state.Size = new System.Drawing.Size(99, 23);
             this.end_state.TabIndex = 1;
             this.end_state.Text = "End state:";
             this.end_state.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -198,9 +198,9 @@ namespace TuringMachine
             // start_state
             // 
             this.start_state.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.start_state.Location = new System.Drawing.Point(27, 28);
+            this.start_state.Location = new System.Drawing.Point(27, 33);
             this.start_state.Name = "start_state";
-            this.start_state.Size = new System.Drawing.Size(99, 29);
+            this.start_state.Size = new System.Drawing.Size(99, 24);
             this.start_state.TabIndex = 0;
             this.start_state.Text = "Start state:";
             this.start_state.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,10 +209,10 @@ namespace TuringMachine
             // 
             this.tape.AutoScroll = true;
             this.tape.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tape.Location = new System.Drawing.Point(1, 63);
+            this.tape.Location = new System.Drawing.Point(1, 76);
             this.tape.Margin = new System.Windows.Forms.Padding(1);
             this.tape.Name = "tape";
-            this.tape.Size = new System.Drawing.Size(780, 80);
+            this.tape.Size = new System.Drawing.Size(780, 73);
             this.tape.TabIndex = 0;
             this.tape.WrapContents = false;
             // 
@@ -226,7 +226,7 @@ namespace TuringMachine
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 56);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 69);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // run
