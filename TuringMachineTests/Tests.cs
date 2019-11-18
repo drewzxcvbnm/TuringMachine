@@ -166,7 +166,7 @@ root-to-number  _  _  R  done";
                 "#=1_",
                 string.Join("", chars));
         }
-        
+
         [Test]
         public void TwoPowerOfTwo()
         {
@@ -180,7 +180,7 @@ root-to-number  _  _  R  done";
                 "_xx#xx=1111__",
                 string.Join("", chars));
         }
-        
+
         [Test]
         public void FivePowerOfZero()
         {
@@ -194,6 +194,5 @@ root-to-number  _  _  R  done";
                 "11111#=1_",
                 string.Join("", chars));
         }
-        
     }
 }
